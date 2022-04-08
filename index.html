@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>Title</title>
+		<!-- Required meta tags -->
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+	<body>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-6">
+					<!-- Form nhập liệu thông tin sinh viên -->
+					<h3 class="display-4 text-center">Quản lý sinh viên</h3>
+					<div class="form-group">
+						<p>Mã sinh viên</p>
+						<input id="maSinhVien" class="form-control" />
+						<span id="error_maSinhVien_required" class="text text-danger"></span>
+						<span id="error_maSinhVien_min_max_length" class="text text-danger"></span>
+						<span id="error_maSinhVien_all_number" class="text text-danger"></span>
+					</div>
+					<div class="form-group">
+						<p>Tên sinh viên</p>
+						<input id="tenSinhVien" class="form-control" />
+						<span id="error_tenSinhVien_required" class="text text-danger"></span>
+						<span id="error_tenSinhVien_all_letter" class="text text-danger"></span>
+					</div>
+					<div class="form-group">
+						<p>Loại sinh viên</p>
+						<select id="loaiSinhVien" class="form-control">
+							<option>Khó khăn</option>
+							<option>Bình thuờng</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<div class="row">
+							<div class="col-6">
+								<p>Điểm toán</p>
+								<input id="diemToan" class="form-control" />
+								<span id="error_diemToan_required" class="text text-danger"></span>
+								<span id="error_diemToan_all_number" class="text text-danger"></span>
+								<span id="error_diemToan_min_max_value" class="text text-danger"></span>
+							</div>
+							<div class="col-6">
+								<p>Điểm lý</p>
+								<input id="diemLy" class="form-control" />
+								<span id="error_diemLy_required" class="text text-danger"></span>
+								<span id="error_diemLy_all_number" class="text text-danger"></span>
+								<span id="error_diemLy_min_max_value" class="text text-danger"></span>
+							</div>
+							
+						</div>
+					</div>
+					<div class="form-group">
+						<p>Điểm rèn luyện</p>
+						<input id="diemRenLuyen" class="form-control"/>
+						<span id="error_diemRenLuyen_required" class="text text-danger"></span>
+						<span id="error_diemRenLuyen_all_number" class="text text-danger"></span>
+						<span id="error_diemRenLuyen_min_max_value" class="text text-danger"></span>
+					</div>
+					<div class="form-group text-center">
+						<button id="btnXacNhan" class="btn btn-success">Xác nhận</button>
+					</div>
+				</div>
+				<div class="col-6">
+					<!-- Hiển thị thông tin sinh viên -->
+					<h3 class="text-center display-4">Thông tin sinh viên</h3>
+					<p>Tên sinh viên: <span id="txtTenSinhVien" style="font-weight: bold;"></span></p>
+					<p>Mã sinh viên: <span id="txtMaSinhVien" style="font-weight: bold;"></span></p>
+					<p>Loại sinh viên: <span id="txtLoaiSinhVien" style="font-weight: bold;"></span></p>
+					<p>Điểm trung bình: <span id="txtDiemTrungBinh" style="font-weight: bold;"></span></p>
+					<p>Xếp loại: <span id="txtXepLoai" style="font-weight: bold;"></span></p>
+				</div>
+			</div>
+		</div>
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<!-- <script src="./index.js"></script> -->
+
+		<script src="./models/Validation.js"></script>
+		<script src="./models/SinhVien.js"></script>
+		<script src="./jsOOP.js"></script>
+	</body>
+</html>
